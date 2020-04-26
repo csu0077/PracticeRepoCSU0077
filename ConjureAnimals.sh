@@ -15,36 +15,33 @@ do
     case $dice in
     3d4)
         roll=$(( ($RANDOM % 4) + ($RANDOM % 4) + ($RANDOM % 4) + bonusPt + 1 ))
-        sum=$(( sum + roll ))
         ;;
     2d4)
         roll=$(( ($RANDOM % 4) + ($RANDOM % 4) + bonusPt + 1 ))
-        sum=$(( sum + roll ))
         ;;
     1d4)
         roll=$(( ($RANDOM % 4) + bonusPt + 1 ))
-        sum=$(( sum + roll ))
         ;;
     1d6)
         roll=$(( ($RANDOM % 6) + bonusPt + 1 ))
-        sum=$(( sum + roll ))
         ;;
     2d6)
         roll=$(( ($RANDOM % 6) + ($RANDOM % 6) + bonusPt + 1 ))
-        sum=$(( sum + roll ))
         ;;
     1d8)
         roll=$(( ($RANDOM % 8) + bonusPt + 1 ))
-        sum=$(( sum + roll ))
         ;;
     1d10)
         roll=$(( ($RANDOM % 10) + bonusPt + 1 ))
-        sum=$(( sum + roll ))
         ;;
     *)
-        echo "GAY"
+        echo "BAD"
         ;;
     esac
+	
+	echo $roll
+	sum=$(( sum + roll ))
+
 done
 
 echo $sum
