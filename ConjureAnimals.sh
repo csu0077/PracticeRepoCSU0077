@@ -9,6 +9,11 @@ bonusPt=$3
 # sum=$(( sum + ($RANDOM % 4) + ($RANDOM % 4) + bonusPt + 1 ))
 # echo $(( sum + ($RANDOM % 4) + ($RANDOM % 4) + bonusPt + 1 ))
 
+echo "DiceType:  $dice"
+echo "NumRolls:  $numRolls"
+echo "Attack Bonus:  $bonusPt"
+echo "---------"
+
 sum=0
 
 for ((i=1; i<=numRolls; i++ ))
@@ -40,10 +45,11 @@ do
         ;;
     esac
     
-    echo $roll
+    echo "$i : $roll"
     sum=$(( sum + roll ))
 done
 
-echo $sum
+echo "--------"
+echo "Total: $sum"
 
 #./a.sh 2d4 7 4
