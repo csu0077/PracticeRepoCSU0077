@@ -9,9 +9,10 @@ bonusPt=$3
 # sum=$(( sum + ($RANDOM % 4) + ($RANDOM % 4) + bonusPt + 1 ))
 # echo $(( sum + ($RANDOM % 4) + ($RANDOM % 4) + bonusPt + 1 ))
 
+sum=0
+
 for ((i=1; i<=numRolls; i++ ))
 do
-    sum=0
     case $dice in
     3d4)
         roll=$(( ($RANDOM % 4) + ($RANDOM % 4) + ($RANDOM % 4) + bonusPt + 1 ))
@@ -35,13 +36,12 @@ do
         roll=$(( ($RANDOM % 10) + bonusPt + 1 ))
         ;;
     *)
-        echo "BAD"
+        echo "GAY"
         ;;
     esac
-	
-	echo $roll
-	sum=$(( sum + roll ))
-
+    
+    echo $roll
+    sum=$(( sum + roll ))
 done
 
 echo $sum
