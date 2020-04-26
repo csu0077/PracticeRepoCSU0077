@@ -41,7 +41,7 @@ do
         roll=$(( ($RANDOM % 10) + bonusPt + 1 ))
         ;;
     *)
-        echo "GAY"
+        echo "BAD"
         ;;
     esac
     
